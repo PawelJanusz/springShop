@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:xmlna="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlna:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css"/>
+
+</head>
+
+<body class="text-center">
+
+<div class="login">
+    <form class="form-sign-in" th:action="@{/login-process}" method="post">
+    <p class="alert alert-danger" th:if="${param.error}">Podany login lub hasło są nieprawidłowe></p>
+
+        <h1 class="h3 mb-3 font-weight-normal" >Zaloguj się</h1>
+        <label for="inputEmail" class="sr-only">Adres email</label>
+        <input type="email" name="username" id="inputEmail" class="form-control" placeholder="Email" th:required="required" />
+        <label for="inputPassword" class="sr-only">Hasło</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Hasło" th:required="required" />
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" >Zaloguj się</button>
+    </form>
+
+</div>
+
+</body>
+
+</html>

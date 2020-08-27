@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:xmlna="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlna:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Dodaj nowy produkt</title>
+</head>
+
+<body>
+<h1>
+    Dodaj nowy produkt
+</h1>
+
+<form action="#" th:action="@{/addproduct}" th:object="${productToInsert}" method="post">
+    <p> Nazwa produktu: <input type="text" th:field="*{productName}"></p>
+    <p> Rodzaj produktu: <input type="text" th:field="*{productType}"></p>
+    <p> Waga produktu: <input type="text" th:field="*{productWeight}"></p>
+    <p> <input type="submit" value="Dodaj"></p>
+    <p> <input type="reset" value="Wyczyść"></p>
+
+</form>
+
+</body>
+</html>

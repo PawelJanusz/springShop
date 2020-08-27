@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xmlna="http://www.w3.org/1999/xhtml"
+      xmlna:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Mały sklep internetowy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css"/>
+
+</head>
+
+<body>
+<div id="title">
+<h1 class="blockquote text-center">Mały sklep internetowy</h1>
+</div>
+
+<div id="buttons">
+<form action="/adduser">
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Dodaj użytkownika</button>
+</form>
+<form action="/usersList">
+    <button class="btn btn-success btn-lg btn-block" value="Przegladaj użytkowników" >Szukaj użytkownika</button>
+</form>
+<form action="/addproduct">
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Dodaj produkt</button>
+    </form>
+<form action="/productList">
+    <button class="btn btn-warning btn-lg btn-block" value="Szukaj produktu">Szukaj produktu</button>
+</form>
+</div>
+</body>
+</html>

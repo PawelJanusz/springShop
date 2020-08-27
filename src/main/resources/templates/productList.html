@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista dodanych produktów</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+<table class="regular table">
+    <thead>
+    <tr>
+        <th>Nazwa produktu</th>
+        <th>Typ produktu</th>
+        <th>Waga produktu</th>
+        <th>Akcja</th>
+
+    </tr>
+    </thead>
+    <tbody class="regular-table">
+    <tr th:each="product: ${allProducts}" >
+        <form action="/deleteproduct" method="post" th:object="${product}">
+            <td th:action="${product.productName}"></td>
+            <td th:action="${product.productType}"></td>
+            <td th:action="${product.productWeight}"></td>
+            <td th:action="${product.productDate}"></td>
+            <td>
+                <input type="hidden" name="productName" th:value="${product.productName}"/>
+                <input type="hidden" name="productType" th:value="${product.productType}"/>
+                <input type="hidden" name="productWeight" th:value="${product.productWeight}"/>
+                <button class="btn btn-success" value="remove">Usuń</button>
+
+            </td>
+        </form>
+    </tr>
+    </tbody>
+</table>
+
+
+<form action="#" th:action="@{/index}" method="post">
+    <input type="submit" value="OK">
+</form>
+</body>
+</html>
